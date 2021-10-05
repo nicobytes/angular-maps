@@ -1,0 +1,25 @@
+<div class="container is-fullhd">
+  <div class="columns is-gapless">
+    <div class="column is-one-third">
+      <div class="form">
+        <nav class="panel">
+          <div class="panel-block">
+            <div class="field">
+              <p class="control is-expanded">
+                <input (keyup.enter)="addPoint()" [(ngModel)]="input" type="text" placeholder="lat,lng" class="input">
+              </p>
+            </div>
+          </div>
+        </nav>
+        <a class="panel-block" *ngFor="let point of points">
+          {{ point.lat }},{{ point.lng }}
+        </a>
+      </div>
+    </div>
+    <div class="column">
+      <google-map height="100vh" width="100%" [center]="center" [zoom]="14">
+        <map-marker [position]="position" *ngFor="let position of points"></map-marker>
+      </google-map>
+    </div>
+  </div>
+</div>

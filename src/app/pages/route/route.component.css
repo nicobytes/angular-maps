@@ -1,0 +1,9 @@
+.container{
+  height: 100vh;
+}
+
+div.form {
+  height: 100vh;
+  background: rgb(62,191,252);
+  background: linear-gradient(0deg, rgba(62,191,252,1) 35%, rgba(53,139,251,1) 100%);
+}
